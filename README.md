@@ -1,3 +1,37 @@
+# Conda recipes for a channel of kwant + sequential mkl for centos 7
+
+## Docker image with anaconda and mkl
+
+Copy the intel mkl tar file  (l_mkl_11.3.2.181.tgz) you download from the
+intel website to docker_with_mkl. Run
+
+    docker build -t centos7_anaconda_mkl docker_with_mkl
+
+To install MKL, we need to do some things by hand (MKL wants license
+number, etc.). Run
+
+    docker run -it centos7_anaconda_mkl bash
+
+and run in docker
+
+    bash install.sh
+
+to install MKL. You will be asked for license number, etc. For some reason,
+intel warns you that the destination directory already exists (it did make it
+itself when the license number is entered). Just agree to overwrite the
+directory. MKL is then installed to /opt/intel/.
+
+Now we need to save these changes to the container. Find out the container
+id you just were running using docker ps -a, and do
+
+   sudo docker commit container-id centos7_anaconda_mkl
+
+Then run
+
+   docker build -t centos7_build .
+
+to build the recipes.
+
 # Conda-recipes for my [binstar](http://binstar.org/basnijholt)
 
 In order to install [Kwant](kwant-project.org/) I made some recipes to compile it and its dependencies.

@@ -9,14 +9,12 @@ source:
 
 requirements:
   build:
-    - gcc
     - python
     - cython
     - mkl_seq
     - numpy
 
   run:
-    - gcc
     - python
     - mkl_seq
     - numpy

@@ -5,6 +5,7 @@ if [ -z $MKLROOT ]; then
   exit 10;
 fi
 
+mkdir -p $PREFIX/lib
 cd $MKLROOT/tools/builder
 make libintel64 threading=sequential name=$PREFIX/lib/libourmkl_seq export=$RECIPE_DIR/blas_lapack_list
 cd -

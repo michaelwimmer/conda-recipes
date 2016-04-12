@@ -18,7 +18,6 @@ build:
 requirements:
   build:
     - python
-    - gcc
     - mkl_seq
     - metis
     - scotch
@@ -42,8 +41,6 @@ requirements:
     - cython
     - nose
     - tinyarray
-    - libgcc
-    - libgfortran [linux]
 
 test:
   # Python imports

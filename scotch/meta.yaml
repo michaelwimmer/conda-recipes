@@ -2,14 +2,6 @@ package:
   name: scotch
   version: 6.0.4
 
-requirements:
- build:
-  - gcc
-  - zlib [linux]
- run:
-  - zlib [linux]
-  - libgcc
-
 build:
   number: 1
 

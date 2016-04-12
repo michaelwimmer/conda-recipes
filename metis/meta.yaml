@@ -13,10 +13,3 @@ source:
 build:
   number: 1
   binary_relocation: true
-
-requirements:
-  build:
-    - cmake
-    - gcc
-  run:
-    - libgcc

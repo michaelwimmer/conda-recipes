@@ -12,13 +12,11 @@ build:
 
 requirements:
   build:
-    - gcc
     - metis
     - scotch
     - openblas [linux]
 
   run:
-    - libgcc
     - metis
     - scotch
     - openblas [linux]

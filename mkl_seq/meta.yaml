@@ -1,6 +1,6 @@
 package:
   name: mkl_seq
-  version: 11.3_1
+  version: 11.3.2
 
 build:
   number: 1
@@ -9,12 +9,6 @@ build:
     - MKLROOT
   track_features:
     - mkl_seq
-
-requirements:
-  build:
-    - gcc
-  run:
-    - libgcc
 
 about:
   license: Commercial

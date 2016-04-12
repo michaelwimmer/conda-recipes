@@ -12,7 +12,6 @@ requirements:
     - python
     - setuptools
     - nose
-    - gcc
 
   run:
     - python
